@@ -1,0 +1,84 @@
+{
+  "registrationData": [
+//    ADMIN
+    {
+      "username": "user1",
+      "password": "password123",
+      "email": "user1@example.com",
+      "age": 25
+    },
+//    USER
+    {
+      "username": "user2",
+      "password": "password",
+      "email": "user2@example.com",
+      "age": 19,
+      "preferredCuisine": "VEGETARIAN"
+    }
+  ],
+  "loginData": [
+//    ADMIN
+    {
+      "username": "user1",
+      "password": "password123"
+    },
+//    USER
+    {
+      "username": "user2",
+      "password": "password"
+    }
+  ],
+
+
+// Adding Restaurant
+
+{
+  "restaurantName": "Cafe Day",
+  "maxTable":10,
+  "restaurantAddress": {
+    "street": "sample street",
+    "city": "Sample City",
+    "state": "Sample State",
+    "zipCode": "12345"
+  },
+  "foodType": "VEGETARIAN",
+  "latitude": 13.0412,
+  "longitude": 80.2356
+}
+
+//ADDING FOOD ITEM IN MENU
+
+{
+  "name": "Dosa",
+  "description":"Indian Creepe with Potato Bhaji",
+  "price": 130,
+  "vegetarian": true,
+  "category":"MAIN_COURSE",
+  "restaurantId": "1"
+}
+
+
+
+  // Booking based on restaurant Id
+  {
+  "restaurantId": 1,
+  "bookingDate": "2024-07-01",
+  "numberOfPeople": 4
+}
+
+//update booking url example:http://localhost:8080/api/bookings/1?username={add your username}
+
+//For FoodCartItems-Takes customer id and adds food cart-need to connect it to restaurant and menuitems
+{
+    "id":1,
+    "name":"Burger",
+    "price":120
+}
+Note:Gives Final price also
+
+//to search restaurant
+http://localhost:8080/Restaurants/search?searchTerm=RestaurantName in Get method of postman
+
+//To search based on Location
+http://localhost:8080/Restaurants/nearby?latitude=13.1431&longitude=77.6291&radius=10 in postman url
+//add latitude and Longitude of your location with desired radius
